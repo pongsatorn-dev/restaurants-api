@@ -15,10 +15,10 @@ class PlaceApiController extends Controller
     }
     
     // this function for search geometry by name place
-    public function search($searchPlace = 'bangsue') {
+    public function search($searchPlace = 'bang sue') {
 
         if($searchPlace == "null") {
-            $searchPlace = 'bangsue';
+            $searchPlace = 'bang sue';
         }
 
         //set cache key
