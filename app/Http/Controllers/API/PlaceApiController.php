@@ -29,7 +29,7 @@ class PlaceApiController extends Controller
             return Cache::get($cacheKey);
         }
 
-        $endpoint = 'textsearch/json?query='.$searchPlace;
+        $endpoint = 'textsearch/json?query='.urlencode($searchPlace);
         $response = $this->call($endpoint);
         $place = $this->status($response['status']) ? collect($response['results']) : false;
 
@@ -97,7 +97,6 @@ class PlaceApiController extends Controller
     private function call($endpoint) {
 
         $url = $this->url.$endpoint.'&key='.$this->apiKey;
-
         $options = array(
             CURLOPT_URL => $url,
             CURLOPT_RETURNTRANSFER => true,
