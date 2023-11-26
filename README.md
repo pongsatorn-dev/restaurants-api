@@ -1,7 +1,8 @@
 ## Start
-1. Run composer update
-2. Copy .env.example to .env
-3. Go to localhost/public/api/{endpoint api}
+1. composer update
+2. copy .env.example to .env
+3. php artisan key:generate
+4. go to localhost/public/api/{endpoint api}
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
